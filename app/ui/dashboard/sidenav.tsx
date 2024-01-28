@@ -1,6 +1,8 @@
 import Menu from "@/app/ui/dashboard/menu";
 import { faHouse, faRotateRight, faBuilding, faArrowRightFromBracket, faPlus } from "@fortawesome/free-solid-svg-icons";
 import Button from "@/app/ui/button";
+import Image from 'next/image'
+import logo from '@/public/logo.png';
 import Link from "next/link";
 
 const menus = [
@@ -26,7 +28,7 @@ export default function Sidenav() {
     <nav className="flex flex-col justify-between p-5 bg-gray-800 rounded-lg">
       <div>
         <Link href="/dashboard">
-          <img src="/logo.png" alt="logo" className="w-20" />
+          <Image src={logo} alt="Logo" className="w-20" priority={true}></Image>
         </Link>
         <div className="pt-7 text-gray-400">
           <Button key="addNew" title="Add Investment" icon={faPlus} link="/dashboard/add" />
